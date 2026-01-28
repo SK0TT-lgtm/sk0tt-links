@@ -28,7 +28,7 @@ body{
     color:#fff;
 }
 
-/* SLIME */
+/* SLIME U GÓRY */
 .slime{
     position:absolute;top:0;left:0;width:100%;height:240px;
     background:#a8ff00;
@@ -45,7 +45,7 @@ body{
 @keyframes drip2{50%{transform:translateY(30px)}}
 @keyframes drip3{50%{transform:translateY(40px)}}
 
-/* CARD */
+/* KARTA */
 .card{
     position:relative;
     z-index:1;
@@ -65,40 +65,57 @@ body{
     to{opacity:1;transform:none}
 }
 
-/* AVATAR */
+/* AVATAR (TWOJE ZDJĘCIE) */
 .avatar{
-    width:110px;height:110px;margin:0 auto 15px;
+    width:120px;
+    height:120px;
+    margin:0 auto 15px;
     border-radius:50%;
-    background:radial-gradient(circle,#caff3a,#3fa500);
-    display:flex;align-items:center;justify-content:center;
-    font-size:44px;font-weight:600;color:#081b00;
+    background:url("avatar.jpg") center/cover no-repeat;
     box-shadow:0 0 30px #9dff00;
+    border:3px solid #b6ff3a;
 }
 
-h1{color:#caff3a;text-shadow:0 0 12px #7dff00}
-.bio{font-size:13px;color:#d7ffb0;margin:10px 0 25px}
+h1{
+    color:#caff3a;
+    text-shadow:0 0 12px #7dff00;
+}
 
-/* LINKS */
+.bio{
+    font-size:13px;
+    color:#d7ffb0;
+    margin:10px 0 25px;
+}
+
+/* LINKI ZE SLIME */
 .link{
-    display:flex;justify-content:center;align-items:center;
-    gap:12px;margin:15px 0;padding:16px;
-    border-radius:16px;
-    text-decoration:none;color:#fff;font-size:17px;
-    background:linear-gradient(135deg,#9dff00,#2d7f00);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:15px 0;
+    padding:16px;
+    border-radius:18px;
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("avatar.jpg");
+    background-size:cover;
+    background-position:center;
     box-shadow:0 0 25px rgba(157,255,0,.4);
-    transition:.2s;
+    transition:.25s;
 }
+
 .link:hover{
     transform:scale(1.07);
     box-shadow:0 0 45px rgba(157,255,0,.8);
 }
-.link i{font-size:22px}
 
-/* COUNTER */
-.counter{
-    font-size:11px;
-    margin-top:6px;
-    opacity:.6;
+.link i{
+    font-size:22px;
+    filter:drop-shadow(0 0 6px #7dff00);
 }
 
 footer{
@@ -113,45 +130,28 @@ footer{
 <div class="slime"></div>
 
 <div class="card">
-    <div class="avatar">S</div>
+    <div class="avatar"></div>
     <h1>Sk0tt</h1>
     <div class="bio">Streamer • Gaming • Content Creator</div>
 
-    <a class="link" data-id="tiktok" href="https://www.tiktok.com/@__sk0tt__?_r=1&_t=ZN-93R1BMY0tEs" target="_blank">
+    <a class="link" href="https://www.tiktok.com/@__sk0tt__?_r=1&_t=ZN-93R1BMY0tEs" target="_blank">
         <i class="fa-brands fa-tiktok"></i> TikTok
     </a>
-    <div class="counter" id="tiktok-count"></div>
 
-    <a class="link" data-id="kick" href="https://kick.com/sk0t7" target="_blank">
+    <a class="link" href="https://kick.com/sk0t7" target="_blank">
         <i class="fa-solid fa-bolt"></i> Kick
     </a>
-    <div class="counter" id="kick-count"></div>
 
-    <a class="link" data-id="twitch" href="https://twitch.tv/skk0t" target="_blank">
+    <a class="link" href="https://twitch.tv/skk0t" target="_blank">
         <i class="fa-brands fa-twitch"></i> Twitch
     </a>
-    <div class="counter" id="twitch-count"></div>
 
-    <a class="link" data-id="youtube" href="https://youtube.com/@skott-001?si=tfER9sPpsandsUzc" target="_blank">
+    <a class="link" href="https://youtube.com/@skott-001?si=tfER9sPpsandsUzc" target="_blank">
         <i class="fa-brands fa-youtube"></i> YouTube
     </a>
-    <div class="counter" id="youtube-count"></div>
 
     <footer>© 2026 Sk0tt</footer>
 </div>
-
-<script>
-document.querySelectorAll('.link').forEach(link=>{
-    const id=link.dataset.id;
-    const key='click_'+id;
-    let count=localStorage.getItem(key)||0;
-    document.getElementById(id+'-count').innerText=`Kliknięcia: ${count}`;
-    link.addEventListener('click',()=>{
-        count++;
-        localStorage.setItem(key,count);
-    });
-});
-</script>
 
 </body>
 </html>
