@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sk0tt | Social Links</title>
+    <!-- Import czcionki Orbitron dla gamingowego stylu -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome dla ikon społecznościowych -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #a8ff00;
+            --dark-bg: #121212;
+            --card-bg: rgba(26, 26, 26, 0.95);
+            --neon-shadow: 0 0 20px rgba(168, 255, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--dark-bg);
+            /* Tło gradientowe z lekką poświatą u góry dla głębi */
+            background: radial-gradient(circle at top, #1a2e05 0%, #121212 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--card-bg);
+            border-radius: 30px;
+            padding: 40px 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 255, 0, 0.1);
+            border: 1px solid rgba(168, 255, 0, 0.05);
+            text-align: center;
+        }
+
+        /* Stylizacja awatara z neonową obwódką */
+        .profile-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-green);
+            box-shadow: 0 0 25px var(--primary-green);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Nazwa i Bio */
+        h1 {
+            font-size: 32px;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(168, 255, 0, 0.5);
+        }
+
+        .bio {
+            font-size: 11px;
+            color: #aaa;
+            letter-spacing: 1.5px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        /* Przyciski linków */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 16px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .social-link:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(168, 255, 0, 0.2);
+        }
+
+        .social-link i {
+            font-size: 20px;
+            position: absolute;
+            left: 20px;
+        }
+
+        /* Specjalny styl dla logo Kick wewnątrz przycisku */
+        .kick-icon-small {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 20px;
+            filter: drop-shadow(0 0 2px var(--primary-green));
+        }
+
+        .social-link span {
+            margin-left: 5px;
+        }
+
+        footer {
+            margin-top: 35px;
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profil użytkownika -->
+        <div class="profile-container">
+            <img src="04405FAE-00DC-4B64-983C-AAEFD4693D2B.png" alt="Avatar Sk0tt" class="avatar">
+        </div>
+
+        <h1>Sk0tt</h1>
+        <p class="bio">Streamer · Gaming · Content Creator</p>
+
+        <!-- Lista mediów społecznościowych -->
+        <div class="links-list">
+            <!-- TIKTOK -->
+            <a href="https://www.tiktok.com/@__sk0tt__" class="social-link" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TIKTOK</span>
+            </a>
+
+            <!-- KICK - Z Twoim nowym logo -->
+            <a href="https://kick.com/sk0t7" class="social-link" target="_blank">
+                <img src="IMG_6823.png" alt="Kick Logo" class="kick-icon-small">
+                <span>KICK</span>
+            </a>
+
+            <!-- TWITCH -->
+            <a href="https://twitch.tv/skk0t" class="social-link" target="_blank">
+                <i class="fa-brands fa-twitch"></i>
+                <span>TWITCH</span>
+            </a>
+
+            <!-- YOUTUBE -->
+            <a href="https://youtube.com/@skott-001" class="social-link" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                <span>YOUTUBE</span>
+            </a>
+        </div>
+
+        <footer>© 2026 SK0TT</footer>
+    </div>
+
+</body>
+</html>
