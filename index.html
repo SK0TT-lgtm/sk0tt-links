@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Sk0tt | Social Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    
+    body {
+        min-height: 100vh;
+        background: radial-gradient(circle at top,#a8ff00,#1c5f00 70%,#081b00);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Orbitron', sans-serif;
+        color: #fff;
+        padding: 20px;
+    }
+
+    /* SLIME - poprawione pozycjonowanie */
+    .slime {
+        position: fixed; top: 0; left: 0; width: 100%; height: 200px;
+        background: #a8ff00;
+        border-radius: 0 0 50% 50%;
+        z-index: 0;
+    }
+
+    .card {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 24px;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 40px rgba(140, 255, 0, 0.3);
+        text-align: center;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        border: 4px solid #a8ff00;
+        box-shadow: 0 0 20px #a8ff00;
+        /* Upewnij się, że ten plik jest w Twoim repozytorium na GitHubie! */
+        background: url("04405FAE-00DC-4B64-983C-AAEFD4693D2B.png") center/cover no-repeat;
+    }
+
+    h1 { color: #a8ff00; margin-bottom: 5px; text-shadow: 0 0 10px rgba(168, 255, 0, 0.5); }
+    .bio { font-size: 0.8rem; color: #d7ffb0; margin-bottom: 25px; }
+
+    .link {
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        margin: 12px 0; padding: 15px;
+        border-radius: 15px;
+        text-decoration: none; color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(168, 255, 0, 0.2);
+        transition: 0.3s;
+    }
+
+    .link:hover {
+        background: rgba(168, 255, 0, 0.1);
+        transform: scale(1.03);
+        border-color: #a8ff00;
+    }
+
+    footer { margin-top: 20px; font-size: 0.7rem; opacity: 0.5; }
+</style>
+</head>
+<body>
+
+<div class="slime"></div>
+
+<div class="card">
+    <div class="avatar"></div>
+    <h1>Sk0tt</h1>
+    <div class="bio">Streamer • Gaming • Content Creator</div>
+
+    <a class="link" href="https://www.tiktok.com/@__sk0tt__" target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+
+    <a class="link" href="https://kick.com/sk0t7" target="_blank">
+        <i class="fa-solid fa-bolt"></i> Kick
+    </a>
+
+    <a class="link" href="https://twitch.tv/skk0t" target="_blank">
+        <i class="fa-brands fa-twitch"></i> Twitch
+    </a>
+
+    <a class="link" href="https://youtube.com/@skott-001" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
+
+    <footer>© 2026 Sk0tt</footer>
+</div>
+
+</body>
+</html>
