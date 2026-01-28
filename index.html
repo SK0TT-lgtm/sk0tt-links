@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Sk0tt | Social Links</title>
+<meta name="description" content="Sk0tt – streamer, gaming, content creator. TikTok, Kick, Twitch, YouTube.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟢</text></svg>">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- IKONY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    min-height:100vh;
+    /* Ustawienie przesłanego zdjęcia jako tła całej strony */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("IMG_4727.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Orbitron',sans-serif;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/* KARTA */
+.card{
+    position:relative;
+    z-index:1;
+    width:90%;
+    max-width:420px;
+    padding:40px 30px;
+    border-radius:24px;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 50px rgba(140,255,0,0.3);
+    border: 1px solid rgba(168, 255, 0, 0.2);
+    text-align:center;
+    animation:enter 0.8s ease-out;
+}
+
+@keyframes enter{
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:none}
+}
+
+/* AVATAR */
+.avatar{
+    width:120px;
+    height:120px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    /* Tutaj zostawiamy Twoje zdjęcie profilowe */
+    background:url("04405FAE-00DC-4B64-983C-AAEFD4693D2B.png") center/cover no-repeat;
+    box-shadow:0 0 30px #9dff00;
+    border:3px solid #b6ff3a;
+}
+
+h1{
+    color:#caff3a;
+    text-shadow:0 0 12px #7dff00;
+    margin-bottom: 5px;
+}
+
+.bio{
+    font-size:13px;
+    color:#d7ffb0;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* PRZYCISKI Z TWOIM TŁEM SLIME */
+.link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:15px 0;
+    padding:16px;
+    border-radius:18px;
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight: 600;
+    /* Ustawienie IMG_4727.jpeg jako tła przycisku z przyciemnieniem */
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url("IMG_4727.jpeg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 1px solid rgba(168, 255, 0, 0.3);
+    transition: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.link:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(157,255,0,0.6);
+    border: 1px solid #a8ff00;
+}
+
+.link i{
+    font-size:22px;
+    filter: drop-shadow(0 0 5px #7dff00);
+}
+
+footer{
+    margin-top:25px;
+    font-size:11px;
+    opacity:0.6;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="avatar"></div>
+    <h1>Sk0tt</h1>
+    <div class="bio">Streamer • Gaming • Content Creator</div>
+
+    <a class="link" href="https://www.tiktok.com/@__sk0tt__?_r=1&_t=ZN-93R1BMY0tEs" target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TIKTOK
+    </a>
+
+    <a class="link" href="https://kick.com/sk0t7" target="_blank">
+        <i class="fa-solid fa-bolt"></i> KICK
+    </a>
+
+    <a class="link" href="https://twitch.tv/skk0t" target="_blank">
+        <i class="fa-brands fa-twitch"></i> TWITCH
+    </a>
+
+    <a class="link" href="https://youtube.com/@skott-001?si=tfER9sPpsandsUzc" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YOUTUBE
+    </a>
+
+    <footer>© 2026 SK0TT</footer>
+</div>
+
+</body>
+</html>
